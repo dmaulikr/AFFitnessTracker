@@ -11,7 +11,7 @@ import UIKit
 class FitnessTableViewCell: UITableViewCell {
     
     // MARK: Properties
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var runTimeLabel: UILabel!
     @IBOutlet weak var waistLabel: UILabel!
     @IBOutlet weak var situpsLabel: UILabel!

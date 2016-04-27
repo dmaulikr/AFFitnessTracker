@@ -27,14 +27,16 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        // Set up views if editing an existing Score.
         if let score = score {
-            //navigationItem.title = score.total
+            navigationItem.title = "Edit Score"
             runTimeLabel.text = score.run.description
             situpsLabel.text = score.situps.description
             pushupsLabel.text = score.pushups.description
             waistLabel.text = score.waist.description
         }
         
+        // Enable the Save button only if all fields have values.
         checkValidSave()
     }
 
@@ -66,16 +68,18 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
     }
 
     // This method lets you configure a view controller before it's presented.
-    /*override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        /*if saveButton === sender {
-            let name = nameTextField.text ?? ""
-            let photo = photoImageView.image
-            let rating = ratingControl.rating
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if saveButton === sender {
+            let total = 95
+            let run = Double(runTimeLabel.text!)
+            let situps = Int(situpsLabel.text!)
+            let pushups = Int(pushupsLabel.text!)
+            let waist = Double(waistLabel.text!)
             
-            // Set the meal to be passed to MealTableViewController after the unwind segue.
-            meal = Meal(name: name, photo: photo, rating: rating)
-        }*/
-    }*/
+            // Set the score to be passed to FitnessTableViewController after the unwind segue.
+            score = Score(total: total, run: run!, situps: situps!, pushups: pushups!, waist: waist!)
+        }
+    }
 
 }
 

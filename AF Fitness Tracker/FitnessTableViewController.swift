@@ -30,11 +30,11 @@ class FitnessTableViewController: UITableViewController {
     }
     
     func loadSampleScores() {
-        let score1 = Score(run: 570, situps: 40, pushups: 55, waist: 34.5)!
+        let score1 = Score(total: 80, run: 570, situps: 40, pushups: 55, waist: 34.5)!
         
-        let score2 = Score(run: 615, situps: 38, pushups: 50, waist: 34.5)!
+        let score2 = Score(total: 78, run: 615, situps: 38, pushups: 50, waist: 34.5)!
         
-        let score3 = Score(run: 523, situps: 56, pushups: 65, waist: 34)!
+        let score3 = Score(total: 93, run: 523, situps: 56, pushups: 65, waist: 34)!
         
         scores += [score1, score2, score3]
     }
@@ -64,6 +64,7 @@ class FitnessTableViewController: UITableViewController {
         // Fetches the appropriate score for the data source layout.
         let score = scores[indexPath.row]
         
+        cell.totalLabel.text = score.total.description
         cell.runTimeLabel.text = score.run.description
         cell.waistLabel.text = score.waist.description
         cell.situpsLabel.text = score.situps.description
@@ -126,7 +127,7 @@ class FitnessTableViewController: UITableViewController {
     }
     
     
-    @IBAction func unwindToMealList(sender: UIStoryboardSegue) {
+    @IBAction func unwindToScoreList(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? FitnessViewController, score = sourceViewController.score {
             
             if let selectedIndexPath = tableView.indexPathForSelectedRow {
@@ -136,7 +137,7 @@ class FitnessTableViewController: UITableViewController {
                 tableView.reloadRowsAtIndexPaths([selectedIndexPath], withRowAnimation: .None)
             }
             else {
-                // Add a new meal.
+                // Add a new score.
                 let newIndexPath = NSIndexPath(forRow: scores.count, inSection: 0)
                 scores.append(score)
                 tableView.insertRowsAtIndexPaths([newIndexPath], withRowAnimation: .Bottom)

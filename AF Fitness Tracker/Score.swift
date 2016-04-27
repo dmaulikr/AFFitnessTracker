@@ -11,7 +11,8 @@ import UIKit
 class Score: NSObject, NSCoding {
     
     // MARK: Properties
-    var run: NSTimeInterval
+    var total: Int
+    var run: Double
     var situps: Int
     var pushups: Int
     var waist: Double
@@ -22,6 +23,7 @@ class Score: NSObject, NSCoding {
     
     // MARK: Types
     struct PropertyKey {
+        static let totalKey = "total"
         static let runKey = "run"
         static let situpsKey = "situps"
         static let pushupsKey = "pushups"
@@ -29,8 +31,9 @@ class Score: NSObject, NSCoding {
     }
     
     // MARK: Initialization
-    init?(run: NSTimeInterval, situps: Int, pushups: Int, waist: Double) {
+    init?(total: Int, run: Double, situps: Int, pushups: Int, waist: Double) {
         // Initialize stored properties.
+        self.total = total
         self.run = run
         self.situps = situps
         self.pushups = pushups
@@ -41,20 +44,22 @@ class Score: NSObject, NSCoding {
     
     //MARK: NSCoding
     func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(run, forKey: PropertyKey.runKey)
-        aCoder.encodeObject(situps, forKey: PropertyKey.situpsKey)
+        aCoder.encodeInteger(total, forKey: PropertyKey.totalKey)
+        aCoder.encodeDouble(run, forKey: PropertyKey.runKey)
+        aCoder.encodeInteger(situps, forKey: PropertyKey.situpsKey)
         aCoder.encodeInteger(pushups, forKey: PropertyKey.pushupsKey)
         aCoder.encodeDouble(waist, forKey: PropertyKey.waistKey)
     }
     
     required convenience init?(coder aDecoder: NSCoder) {
-        let run = aDecoder.decodeObjectForKey(PropertyKey.runKey) as! NSTimeInterval
+        let total = aDecoder.decodeIntegerForKey(PropertyKey.totalKey)
+        let run = aDecoder.decodeDoubleForKey(PropertyKey.runKey)
         let situps = aDecoder.decodeIntegerForKey(PropertyKey.situpsKey)
         let pushups = aDecoder.decodeIntegerForKey(PropertyKey.pushupsKey)
         let waist = aDecoder.decodeDoubleForKey(PropertyKey.waistKey)
         
         // Must call designated initializer.
-        self.init(run: run, situps: situps, pushups: pushups, waist: waist)
+        self.init(total: total, run: run, situps: situps, pushups: pushups, waist: waist)
     }
 }
 
