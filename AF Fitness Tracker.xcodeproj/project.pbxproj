@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8165ABC71CD11D3100581440 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8165ABC61CD11D3100581440 /* RunViewController.swift */; };
 		F281506D1CD03B62006CB19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281506C1CD03B62006CB19A /* AppDelegate.swift */; };
 		F281506F1CD03B62006CB19A /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281506E1CD03B62006CB19A /* FitnessViewController.swift */; };
 		F28150721CD03B62006CB19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28150701CD03B62006CB19A /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8165ABC61CD11D3100581440 /* RunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
 		F28150691CD03B62006CB19A /* AF Fitness Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AF Fitness Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F281506C1CD03B62006CB19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F281506E1CD03B62006CB19A /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 			children = (
 				F281506C1CD03B62006CB19A /* AppDelegate.swift */,
 				F281506E1CD03B62006CB19A /* FitnessViewController.swift */,
+				8165ABC61CD11D3100581440 /* RunViewController.swift */,
 				F28150701CD03B62006CB19A /* Main.storyboard */,
 				F2F876A11CD0551E004A72F3 /* FitnessTableViewController.swift */,
 				F2F876A21CD0551E004A72F3 /* FitnessTableViewController.xib */,
@@ -276,6 +279,7 @@
 				F2F8769C1CD0422C004A72F3 /* FitnessTableViewCell.swift in Sources */,
 				F2F8769A1CD03DA6004A72F3 /* Score.swift in Sources */,
 				F281506F1CD03B62006CB19A /* FitnessViewController.swift in Sources */,
+				8165ABC71CD11D3100581440 /* RunViewController.swift in Sources */,
 				F281506D1CD03B62006CB19A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

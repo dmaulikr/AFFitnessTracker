@@ -18,8 +18,8 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
     /*
-     This value is either passed by `MealTableViewController` in `prepareForSegue(_:sender:)`
-     or constructed as part of adding a new meal.
+     This value is either passed by `FitnessTableViewController` in `prepareForSegue(_:sender:)`
+     or constructed as part of adding a new score.
      */
     var score: Score?
     
