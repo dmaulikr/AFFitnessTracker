@@ -15,6 +15,27 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
     @IBOutlet weak var seconds: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    lazy var inputToolbar: UIToolbar = {
+        var toolbar = UIToolbar()
+        toolbar.barStyle = .Default
+        toolbar.translucent = true
+        toolbar.sizeToFit()
+        
+        var doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(RunViewController.inputToolbarDonePressed))
+        var flexibleSpaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
+        var fixedSpaceButton = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
+        //image: UIImage(named: "keyboardPreviousButton")
+        var nextButton  = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(RunViewController.keyboardNextButton))
+        nextButton.width = 50.0
+        //image: UIImage(named: "keyboardNextButton")
+        var previousButton  = UIBarButtonItem(title: "Previous", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(RunViewController.keyboardPreviousButton))
+        
+        toolbar.setItems([fixedSpaceButton, previousButton, fixedSpaceButton, nextButton, flexibleSpaceButton, doneButton], animated: true)
+        toolbar.userInteractionEnabled = true
+        
+        return toolbar
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -22,6 +43,8 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
         // Handle the text field's user input through delegate callbacks
         minutes.delegate = self
         seconds.delegate = self
+        
+        minutes.becomeFirstResponder()
         
         checkValidRunTime()
     }
@@ -36,6 +59,11 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
         //Hide the keyboard
         textField.resignFirstResponder()
         
+        if textField == minutes { // Switch focus to other text field
+            seconds.becomeFirstResponder()
+        }else if textField == seconds {
+            seconds.resignFirstResponder()
+        }
         return true
     }
     
@@ -44,8 +72,28 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
     }
     
     func textFieldDidBeginEditing(textField: UITextField) {
+        if textField.inputAccessoryView == nil {
+            textField.inputAccessoryView = inputToolbar
+            //textField.inputAccessoryView =  Helper.createAccessoryViewWithTarget(self, width: self.view.frame.width/2)
+        }
+        
         // Disable the Save button while editing.
         saveButton.enabled = false
+    }
+    
+    func inputToolbarDonePressed() {
+        minutes.resignFirstResponder()
+        seconds.resignFirstResponder()
+    }
+    
+    func keyboardNextButton() {
+        minutes.resignFirstResponder()
+        seconds.becomeFirstResponder()
+    }
+    
+    func keyboardPreviousButton() {
+        minutes.becomeFirstResponder()
+        seconds.resignFirstResponder()
     }
     
     //MARK: Navigation
