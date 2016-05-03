@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8165ABC71CD11D3100581440 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8165ABC61CD11D3100581440 /* RunViewController.swift */; };
-		8167063A1CD8CD8E00261F50 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816706391CD8CD8E00261F50 /* Launch Screen.storyboard */; };
+		F20DA9141CD1886600447A07 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F20DA9131CD1886600447A07 /* Helper.swift */; };
 		F281506D1CD03B62006CB19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281506C1CD03B62006CB19A /* AppDelegate.swift */; };
 		F281506F1CD03B62006CB19A /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281506E1CD03B62006CB19A /* FitnessViewController.swift */; };
 		F28150721CD03B62006CB19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28150701CD03B62006CB19A /* Main.storyboard */; };
@@ -40,7 +40,7 @@
 
 /* Begin PBXFileReference section */
 		8165ABC61CD11D3100581440 /* RunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
-		816706391CD8CD8E00261F50 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		F20DA9131CD1886600447A07 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		F28150691CD03B62006CB19A /* AF Fitness Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AF Fitness Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F281506C1CD03B62006CB19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F281506E1CD03B62006CB19A /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
@@ -110,6 +110,7 @@
 				F281506C1CD03B62006CB19A /* AppDelegate.swift */,
 				F281506E1CD03B62006CB19A /* FitnessViewController.swift */,
 				8165ABC61CD11D3100581440 /* RunViewController.swift */,
+				F20DA9131CD1886600447A07 /* Helper.swift */,
 				F28150701CD03B62006CB19A /* Main.storyboard */,
 				F2F876A11CD0551E004A72F3 /* FitnessTableViewController.swift */,
 				F2F876A21CD0551E004A72F3 /* FitnessTableViewController.xib */,
@@ -276,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2F876A31CD0551E004A72F3 /* FitnessTableViewController.swift in Sources */,
+				F20DA9141CD1886600447A07 /* Helper.swift in Sources */,
 				F2F8769C1CD0422C004A72F3 /* FitnessTableViewCell.swift in Sources */,
 				F2F8769A1CD03DA6004A72F3 /* Score.swift in Sources */,
 				F281506F1CD03B62006CB19A /* FitnessViewController.swift in Sources */,
