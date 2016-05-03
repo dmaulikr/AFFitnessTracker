@@ -15,6 +15,8 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
     @IBOutlet weak var seconds: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
+    var runTime: Double?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -51,15 +53,26 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
     //MARK: Navigation
     @IBAction func cancel(sender: UIBarButtonItem) {
         // Depending on style of presentation (modal or push presentation), this view controller needs to be dismissed in two different ways.
-        let isPresentingInAddMealMode = presentingViewController is UINavigationController
+        let isPresentingInAddRunMode = presentingViewController is UINavigationController
         
-        if isPresentingInAddMealMode {
+        if isPresentingInAddRunMode {
             dismissViewControllerAnimated(true, completion: nil)
         }
         else {
             navigationController!.popViewControllerAnimated(true)
         }
 
+    }
+
+    // This method lets you configure a view controller before it's presented.
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("Preparing...")
+        if saveButton === sender {
+            
+            let total = (Int(minutes.text!)! * 60) + Int(seconds.text!)!
+            // Set the run time to be passed to FitnessViewController after the unwind segue.
+            runTime = Double(total)
+        }
     }
     
     func checkValidRunTime() {

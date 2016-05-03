@@ -8,11 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		8165ABC71CD11D3100581440 /* RunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8165ABC61CD11D3100581440 /* RunViewController.swift */; };
+		8167063A1CD8CD8E00261F50 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 816706391CD8CD8E00261F50 /* Launch Screen.storyboard */; };
 		F281506D1CD03B62006CB19A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281506C1CD03B62006CB19A /* AppDelegate.swift */; };
 		F281506F1CD03B62006CB19A /* FitnessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281506E1CD03B62006CB19A /* FitnessViewController.swift */; };
 		F28150721CD03B62006CB19A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28150701CD03B62006CB19A /* Main.storyboard */; };
 		F28150741CD03B62006CB19A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28150731CD03B62006CB19A /* Assets.xcassets */; };
-		F28150771CD03B62006CB19A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F28150751CD03B62006CB19A /* LaunchScreen.storyboard */; };
 		F28150821CD03B62006CB19A /* AF_Fitness_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28150811CD03B62006CB19A /* AF_Fitness_TrackerTests.swift */; };
 		F281508D1CD03B62006CB19A /* AF_Fitness_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281508C1CD03B62006CB19A /* AF_Fitness_TrackerUITests.swift */; };
 		F2F8769A1CD03DA6004A72F3 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F876991CD03DA6004A72F3 /* Score.swift */; };
@@ -40,12 +40,12 @@
 
 /* Begin PBXFileReference section */
 		8165ABC61CD11D3100581440 /* RunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunViewController.swift; sourceTree = "<group>"; };
+		816706391CD8CD8E00261F50 /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		F28150691CD03B62006CB19A /* AF Fitness Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AF Fitness Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F281506C1CD03B62006CB19A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F281506E1CD03B62006CB19A /* FitnessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessViewController.swift; sourceTree = "<group>"; };
 		F28150711CD03B62006CB19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F28150731CD03B62006CB19A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		F28150761CD03B62006CB19A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F28150781CD03B62006CB19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F281507D1CD03B62006CB19A /* AF Fitness TrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AF Fitness TrackerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F28150811CD03B62006CB19A /* AF_Fitness_TrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AF_Fitness_TrackerTests.swift; sourceTree = "<group>"; };
@@ -116,7 +116,7 @@
 				F2F8769B1CD0422C004A72F3 /* FitnessTableViewCell.swift */,
 				F2F876991CD03DA6004A72F3 /* Score.swift */,
 				F28150731CD03B62006CB19A /* Assets.xcassets */,
-				F28150751CD03B62006CB19A /* LaunchScreen.storyboard */,
+				816706391CD8CD8E00261F50 /* Launch Screen.storyboard */,
 				F28150781CD03B62006CB19A /* Info.plist */,
 			);
 			path = "AF Fitness Tracker";
@@ -247,9 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F28150771CD03B62006CB19A /* LaunchScreen.storyboard in Resources */,
 				F28150741CD03B62006CB19A /* Assets.xcassets in Resources */,
 				F2F876A41CD0551E004A72F3 /* FitnessTableViewController.xib in Resources */,
+				8167063A1CD8CD8E00261F50 /* Launch Screen.storyboard in Resources */,
 				F28150721CD03B62006CB19A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,14 +322,6 @@
 				F28150711CD03B62006CB19A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		F28150751CD03B62006CB19A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F28150761CD03B62006CB19A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

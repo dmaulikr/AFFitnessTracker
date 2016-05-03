@@ -144,7 +144,7 @@ class FitnessTableViewController: UITableViewController {
             }
         }
         
-        // Save the meals.
+        // Save the score.
         saveScores()
     }
     

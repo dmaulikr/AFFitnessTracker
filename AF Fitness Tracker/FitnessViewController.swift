@@ -79,7 +79,13 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
             // Set the score to be passed to FitnessTableViewController after the unwind segue.
             score = Score(total: total, run: run!, situps: situps!, pushups: pushups!, waist: waist!)
         }
+        
     }
-
+    
+    @IBAction func unwindForRun(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? RunViewController, run = sourceViewController.runTime {
+            // Add a new run time and display for user.
+            runTimeLabel.text = run.description
+        }
+    }
 }
-

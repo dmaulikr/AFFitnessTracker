@@ -325,7 +325,11 @@
                                 <action selector="cancel:" destination="xSR-1b-b5x" id="tOH-DH-lTd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ul5-Ob-jKE"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="ul5-Ob-jKE">
+                            <connections>
+                                <segue destination="u3v-UM-Snb" kind="unwind" unwindAction="unwindForRun:" id="DVj-Kv-PNg"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="minutes" destination="wm8-pb-Phr" id="H5G-5C-8ut"/>
@@ -334,6 +338,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="59I-1k-dMA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="u3v-UM-Snb" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="-1365" y="-1194"/>
         </scene>
