@@ -93,4 +93,11 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
             secondsLabel.text = run.seconds.description
         }
     }
+    
+    @IBAction func unwindForSitups(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? SitupViewController, situps = sourceViewController.situps {
+            // Add a new situps count and display for user.
+            situpsLabel.text = situps.description
+        }
+    }
 }

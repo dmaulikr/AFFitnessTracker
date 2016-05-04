@@ -15,6 +15,7 @@
 		F28150741CD03B62006CB19A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28150731CD03B62006CB19A /* Assets.xcassets */; };
 		F28150821CD03B62006CB19A /* AF_Fitness_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28150811CD03B62006CB19A /* AF_Fitness_TrackerTests.swift */; };
 		F281508D1CD03B62006CB19A /* AF_Fitness_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281508C1CD03B62006CB19A /* AF_Fitness_TrackerUITests.swift */; };
+		F2AFCBE01CD996FA000E404B /* SitupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AFCBDF1CD996FA000E404B /* SitupViewController.swift */; };
 		F2F8769A1CD03DA6004A72F3 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F876991CD03DA6004A72F3 /* Score.swift */; };
 		F2F8769C1CD0422C004A72F3 /* FitnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8769B1CD0422C004A72F3 /* FitnessTableViewCell.swift */; };
 		F2F876A31CD0551E004A72F3 /* FitnessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F876A11CD0551E004A72F3 /* FitnessTableViewController.swift */; };
@@ -54,6 +55,7 @@
 		F28150881CD03B62006CB19A /* AF Fitness TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AF Fitness TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F281508C1CD03B62006CB19A /* AF_Fitness_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AF_Fitness_TrackerUITests.swift; sourceTree = "<group>"; };
 		F281508E1CD03B62006CB19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F2AFCBDF1CD996FA000E404B /* SitupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitupViewController.swift; sourceTree = "<group>"; };
 		F2F876991CD03DA6004A72F3 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		F2F8769B1CD0422C004A72F3 /* FitnessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewCell.swift; sourceTree = "<group>"; };
 		F2F876A11CD0551E004A72F3 /* FitnessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				F281506C1CD03B62006CB19A /* AppDelegate.swift */,
 				F281506E1CD03B62006CB19A /* FitnessViewController.swift */,
 				8165ABC61CD11D3100581440 /* RunViewController.swift */,
+				F2AFCBDF1CD996FA000E404B /* SitupViewController.swift */,
 				F20DA9131CD1886600447A07 /* Helper.swift */,
 				F28150701CD03B62006CB19A /* Main.storyboard */,
 				F2F876A11CD0551E004A72F3 /* FitnessTableViewController.swift */,
@@ -283,6 +286,7 @@
 				F2F8769C1CD0422C004A72F3 /* FitnessTableViewCell.swift in Sources */,
 				F2F8769A1CD03DA6004A72F3 /* Score.swift in Sources */,
 				F281506F1CD03B62006CB19A /* FitnessViewController.swift in Sources */,
+				F2AFCBE01CD996FA000E404B /* SitupViewController.swift in Sources */,
 				8165ABC71CD11D3100581440 /* RunViewController.swift in Sources */,
 				F281506D1CD03B62006CB19A /* AppDelegate.swift in Sources */,
 			);

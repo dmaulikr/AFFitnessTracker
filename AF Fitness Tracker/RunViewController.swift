@@ -118,10 +118,10 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
             if minutes.text == "" {
-                minutes.text = "00"
+                minutes.text = "0"
             }
             if seconds.text == "" {
-                seconds.text = "00"
+                seconds.text = "0"
             }
             
             let total = (Int(minutes.text!)! * 60) + Int(seconds.text!)!
