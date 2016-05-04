@@ -19,6 +19,7 @@
 		F2F8769C1CD0422C004A72F3 /* FitnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8769B1CD0422C004A72F3 /* FitnessTableViewCell.swift */; };
 		F2F876A31CD0551E004A72F3 /* FitnessTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F876A11CD0551E004A72F3 /* FitnessTableViewController.swift */; };
 		F2F876A41CD0551E004A72F3 /* FitnessTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F2F876A21CD0551E004A72F3 /* FitnessTableViewController.xib */; };
+		F2FBC3F51CD968F100CC6584 /* Run.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2FBC3F41CD968F100CC6584 /* Run.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		F2F8769B1CD0422C004A72F3 /* FitnessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewCell.swift; sourceTree = "<group>"; };
 		F2F876A11CD0551E004A72F3 /* FitnessTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewController.swift; sourceTree = "<group>"; };
 		F2F876A21CD0551E004A72F3 /* FitnessTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FitnessTableViewController.xib; sourceTree = "<group>"; };
+		F2FBC3F41CD968F100CC6584 /* Run.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Run.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,8 +119,8 @@
 				F2F8769B1CD0422C004A72F3 /* FitnessTableViewCell.swift */,
 				F2F876991CD03DA6004A72F3 /* Score.swift */,
 				F28150731CD03B62006CB19A /* Assets.xcassets */,
-				816706391CD8CD8E00261F50 /* Launch Screen.storyboard */,
 				F28150781CD03B62006CB19A /* Info.plist */,
+				F2FBC3F41CD968F100CC6584 /* Run.swift */,
 			);
 			path = "AF Fitness Tracker";
 			sourceTree = "<group>";
@@ -250,7 +252,6 @@
 			files = (
 				F28150741CD03B62006CB19A /* Assets.xcassets in Resources */,
 				F2F876A41CD0551E004A72F3 /* FitnessTableViewController.xib in Resources */,
-				8167063A1CD8CD8E00261F50 /* Launch Screen.storyboard in Resources */,
 				F28150721CD03B62006CB19A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F2F876A31CD0551E004A72F3 /* FitnessTableViewController.swift in Sources */,
+				F2FBC3F51CD968F100CC6584 /* Run.swift in Sources */,
 				F20DA9141CD1886600447A07 /* Helper.swift in Sources */,
 				F2F8769C1CD0422C004A72F3 /* FitnessTableViewCell.swift in Sources */,
 				F2F8769A1CD03DA6004A72F3 /* Score.swift in Sources */,

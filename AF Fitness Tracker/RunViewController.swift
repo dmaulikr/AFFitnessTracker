@@ -15,7 +15,7 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
     @IBOutlet weak var seconds: UITextField!
     @IBOutlet weak var saveButton: UIBarButtonItem!
     
-    var runTime: Double?
+    var runTime: Run?
     
     lazy var inputToolbar: UIToolbar = {
         var toolbar = UIToolbar()
@@ -26,11 +26,9 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
         var doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(RunViewController.inputToolbarDonePressed))
         var flexibleSpaceButton = UIBarButtonItem(barButtonSystemItem: .FlexibleSpace, target: nil, action: nil)
         var fixedSpaceButton = UIBarButtonItem(barButtonSystemItem: .FixedSpace, target: nil, action: nil)
-        //image: UIImage(named: "keyboardPreviousButton")
-        var nextButton  = UIBarButtonItem(title: "Next", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(RunViewController.keyboardNextButton))
+        var nextButton  = UIBarButtonItem(image: UIImage(named: "ForwardKeyboardNav"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(RunViewController.keyboardNextButton))
         nextButton.width = 50.0
-        //image: UIImage(named: "keyboardNextButton")
-        var previousButton  = UIBarButtonItem(title: "Previous", style: UIBarButtonItemStyle.Plain, target: self, action: #selector(RunViewController.keyboardPreviousButton))
+        var previousButton  = UIBarButtonItem(image: UIImage(named: "BackKeyboardNav"), style: UIBarButtonItemStyle.Plain, target: self, action: #selector(RunViewController.keyboardPreviousButton))
         
         toolbar.setItems([fixedSpaceButton, previousButton, fixedSpaceButton, nextButton, flexibleSpaceButton, doneButton], animated: true)
         toolbar.userInteractionEnabled = true
@@ -76,11 +74,15 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
     func textFieldDidBeginEditing(textField: UITextField) {
         if textField.inputAccessoryView == nil {
             textField.inputAccessoryView = inputToolbar
-            //textField.inputAccessoryView =  Helper.createAccessoryViewWithTarget(self, width: self.view.frame.width/2)
         }
         
         // Disable the Save button while editing.
         saveButton.enabled = false
+    }
+    
+    let TEXT_FIELD_LIMIT = 2
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        return (textField.text?.utf16.count ?? 0) + string.utf16.count - range.length <= TEXT_FIELD_LIMIT
     }
     
     func inputToolbarDonePressed() {
@@ -114,12 +116,19 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
 
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        print("Preparing...")
         if saveButton === sender {
+            if minutes.text == "" {
+                minutes.text = "00"
+            }
+            if seconds.text == "" {
+                seconds.text = "00"
+            }
             
             let total = (Int(minutes.text!)! * 60) + Int(seconds.text!)!
             // Set the run time to be passed to FitnessViewController after the unwind segue.
-            runTime = Double(total)
+            if total > 0 {
+                runTime = Run(minutes: Int(minutes.text!)!, seconds: Int(seconds.text!)!)
+            }
         }
     }
     
@@ -128,8 +137,8 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
         //check if minutes can be casted to int
         
         //check if seconds can be casted to int
-        if minutes.text == "00" || seconds.text == "00" {
-            //saveButton.enabled = false
+        if (minutes.text == "" && seconds.text == "") || minutes.text! == "" || Int(seconds.text!) > 59 {
+            saveButton.enabled = false
         } else{
             saveButton.enabled = true
         }

@@ -11,7 +11,8 @@ import UIKit
 class FitnessViewController: UIViewController, UINavigationControllerDelegate {
 
     //MARK: Properties
-    @IBOutlet weak var runTimeLabel: UILabel!
+    @IBOutlet weak var minutesLabel: UILabel!
+    @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var situpsLabel: UILabel!
     @IBOutlet weak var pushupsLabel: UILabel!
     @IBOutlet weak var waistLabel: UILabel!
@@ -30,7 +31,8 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
         // Set up views if editing an existing Score.
         if let score = score {
             navigationItem.title = "Edit Score"
-            runTimeLabel.text = score.run.description
+            minutesLabel.text = score.run.minutes.description
+            secondsLabel.text = score.run.seconds.description
             situpsLabel.text = score.situps.description
             pushupsLabel.text = score.pushups.description
             waistLabel.text = score.waist.description
@@ -47,7 +49,7 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
     
     func checkValidSave() {
         // Disable the Save button if the text field is empty.
-        if runTimeLabel.text == "" || pushupsLabel.text == "" || situpsLabel == "" || waistLabel == "" {
+        if minutesLabel.text == "" || secondsLabel.text == "" || pushupsLabel.text == "" || situpsLabel == "" || waistLabel == "" {
             saveButton.enabled = false
         } else{
             saveButton.enabled = true
@@ -71,7 +73,9 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
             let total = 95
-            let run = Double(runTimeLabel.text!)
+            let minutes = Int(minutesLabel.text!)
+            let seconds = Int(secondsLabel.text!)
+            let run = Run(minutes: minutes!, seconds: seconds!)
             let situps = Int(situpsLabel.text!)
             let pushups = Int(pushupsLabel.text!)
             let waist = Double(waistLabel.text!)
@@ -85,7 +89,8 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
     @IBAction func unwindForRun(sender: UIStoryboardSegue) {
         if let sourceViewController = sender.sourceViewController as? RunViewController, run = sourceViewController.runTime {
             // Add a new run time and display for user.
-            runTimeLabel.text = run.description
+            minutesLabel.text = run.minutes.description
+            secondsLabel.text = run.seconds.description
         }
     }
 }

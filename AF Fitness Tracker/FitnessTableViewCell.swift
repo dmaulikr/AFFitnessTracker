@@ -12,7 +12,8 @@ class FitnessTableViewCell: UITableViewCell {
     
     // MARK: Properties
     @IBOutlet weak var totalLabel: UILabel!
-    @IBOutlet weak var runTimeLabel: UILabel!
+    @IBOutlet weak var minutesLabel: UILabel!
+    @IBOutlet weak var secondsLabel: UILabel!
     @IBOutlet weak var waistLabel: UILabel!
     @IBOutlet weak var situpsLabel: UILabel!
     @IBOutlet weak var pushupsLabel: UILabel!

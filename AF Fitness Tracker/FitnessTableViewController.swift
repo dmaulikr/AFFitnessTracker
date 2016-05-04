@@ -30,11 +30,14 @@ class FitnessTableViewController: UITableViewController {
     }
     
     func loadSampleScores() {
-        let score1 = Score(total: 80, run: 570, situps: 40, pushups: 55, waist: 34.5)!
+        let run1 = Run(minutes: 12, seconds: 48)
+        let score1 = Score(total: 80, run: run1!, situps: 40, pushups: 55, waist: 34.5)!
         
-        let score2 = Score(total: 78, run: 615, situps: 38, pushups: 50, waist: 34.5)!
+        let run2 = Run(minutes: 9, seconds: 54)
+        let score2 = Score(total: 78, run: run2!, situps: 38, pushups: 50, waist: 34.5)!
         
-        let score3 = Score(total: 93, run: 523, situps: 56, pushups: 65, waist: 34)!
+        let run3 = Run(minutes: 10, seconds: 34)
+        let score3 = Score(total: 93, run: run3!, situps: 56, pushups: 65, waist: 34)!
         
         scores += [score1, score2, score3]
     }
@@ -65,7 +68,8 @@ class FitnessTableViewController: UITableViewController {
         let score = scores[indexPath.row]
         
         cell.totalLabel.text = score.total.description
-        cell.runTimeLabel.text = score.run.description
+        cell.minutesLabel.text = score.run.minutes.description
+        cell.secondsLabel.text = score.run.seconds.description
         cell.waistLabel.text = score.waist.description
         cell.situpsLabel.text = score.situps.description
         cell.pushupsLabel.text = score.pushups.description

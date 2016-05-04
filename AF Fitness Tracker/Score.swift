@@ -12,7 +12,7 @@ class Score: NSObject, NSCoding {
     
     // MARK: Properties
     var total: Int
-    var run: Double
+    var run: Run
     var situps: Int
     var pushups: Int
     var waist: Double
@@ -31,7 +31,7 @@ class Score: NSObject, NSCoding {
     }
     
     // MARK: Initialization
-    init?(total: Int, run: Double, situps: Int, pushups: Int, waist: Double) {
+    init?(total: Int, run: Run, situps: Int, pushups: Int, waist: Double) {
         // Initialize stored properties.
         self.total = total
         self.run = run
@@ -45,7 +45,7 @@ class Score: NSObject, NSCoding {
     //MARK: NSCoding
     func encodeWithCoder(aCoder: NSCoder) {
         aCoder.encodeInteger(total, forKey: PropertyKey.totalKey)
-        aCoder.encodeDouble(run, forKey: PropertyKey.runKey)
+        aCoder.encodeObject(run, forKey: PropertyKey.runKey)
         aCoder.encodeInteger(situps, forKey: PropertyKey.situpsKey)
         aCoder.encodeInteger(pushups, forKey: PropertyKey.pushupsKey)
         aCoder.encodeDouble(waist, forKey: PropertyKey.waistKey)
@@ -53,7 +53,7 @@ class Score: NSObject, NSCoding {
     
     required convenience init?(coder aDecoder: NSCoder) {
         let total = aDecoder.decodeIntegerForKey(PropertyKey.totalKey)
-        let run = aDecoder.decodeDoubleForKey(PropertyKey.runKey)
+        let run = aDecoder.decodeObjectForKey(PropertyKey.runKey) as! Run
         let situps = aDecoder.decodeIntegerForKey(PropertyKey.situpsKey)
         let pushups = aDecoder.decodeIntegerForKey(PropertyKey.pushupsKey)
         let waist = aDecoder.decodeDoubleForKey(PropertyKey.waistKey)
