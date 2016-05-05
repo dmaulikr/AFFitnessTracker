@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import QuartzCore
 
 class RunViewController: UIViewController, UITextFieldDelegate, UINavigationControllerDelegate {
 
     //MARK: Properties
     @IBOutlet weak var minutes: UITextField!
     @IBOutlet weak var seconds: UITextField!
+    @IBOutlet weak var timer: UILabel!
+    @IBOutlet weak var startStopButton: UIButton!
+    @IBOutlet weak var resetButton: UIButton!
     @IBOutlet weak var saveButton: UIBarButtonItem!
+    
+    var startTime = NSTimeInterval()
+    var pausedTime = NSTimeInterval()
+    var timerMinutes: String!
+    var timerSeconds: String!
+    var timerTime = NSTimer()
+    var paused: Bool!
     
     var runTime: Run?
     
@@ -44,7 +55,10 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
         minutes.delegate = self
         seconds.delegate = self
         
-        minutes.becomeFirstResponder()
+        //minutes.becomeFirstResponder()
+
+        // Ensure that the display link is initially not updating //
+        self.paused = true;
         
         checkValidRunTime()
     }
@@ -114,6 +128,52 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
 
     }
 
+    @IBAction func startStopButtonPressed(sender: UIButton) {
+        // Toggle the paused boolean value //
+        self.paused = !(self.paused)
+        
+        // if the display link is not updating us... //
+        var buttonText:String = "Stop"
+        if self.paused! {
+            timerTime.invalidate()
+            if self.timerTime.timeInterval > 0 {
+                buttonText = "Resume"
+                pausedTime = NSDate.timeIntervalSinceReferenceDate() - startTime
+                minutes.text = timerMinutes
+                seconds.text = timerSeconds
+                saveButton.enabled = true
+            } else {
+                buttonText = "Start"
+            }
+        }
+        
+        if buttonText == "Stop" {
+            let aSelector : Selector = #selector(RunViewController.updateTime)
+            timerTime = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            if self.startStopButton.currentTitle != "Resume" {
+                startTime = NSDate.timeIntervalSinceReferenceDate()
+            } else {
+                startTime = NSDate.timeIntervalSinceReferenceDate() - self.pausedTime
+            }
+        }
+        
+        self.startStopButton.setTitle(buttonText, forState: UIControlState.Normal)
+    }
+    
+    @IBAction func resetButtonPressed(sender: UIButton) {
+        // Pause display link updates //
+        self.paused = true;
+        
+        // Set default numeric display value //
+        self.timer.text = "00:00"
+        
+        timerTime.invalidate()
+        startTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        // Set button to Start state //
+        self.startStopButton.setTitle("Start", forState: UIControlState.Normal)
+    }
+    
     // This method lets you configure a view controller before it's presented.
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if saveButton === sender {
@@ -142,5 +202,29 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
         } else{
             saveButton.enabled = true
         }
+    }
+    
+    func updateTime() {
+        
+        let currentTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        //Find the difference between current time and start time.
+        var elapsedTime: NSTimeInterval = currentTime - startTime
+        
+        //calculate the minutes in elapsed time.
+        let minutes = UInt8(elapsedTime / 60.0)
+        elapsedTime -= (NSTimeInterval(minutes) * 60)
+        
+        //calculate the seconds in elapsed time.
+        let seconds = UInt8(elapsedTime)
+        elapsedTime -= NSTimeInterval(seconds)
+        
+        //add the leading zero for minutes, seconds and millseconds and store them as string constants
+        timerMinutes = String(format: "%02d", minutes)
+        timerSeconds = String(format: "%02d", seconds)
+        
+        //concatenate minuets and seconds as assign it to the UILabel
+        timer.text = timerMinutes + ":" + timerSeconds
+        
     }
 }

@@ -90,7 +90,13 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
         if let sourceViewController = sender.sourceViewController as? RunViewController, run = sourceViewController.runTime {
             // Add a new run time and display for user.
             minutesLabel.text = run.minutes.description
-            secondsLabel.text = run.seconds.description
+            if run.seconds.description.characters.count == 1  {
+                secondsLabel.text = "0" + run.seconds.description
+            } else if run.seconds.description.characters.count == 2 {
+                secondsLabel.text = run.seconds.description
+            } else {
+                secondsLabel.text = "00"
+            }
         }
     }
     
