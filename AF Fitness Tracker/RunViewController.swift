@@ -54,8 +54,6 @@ class RunViewController: UIViewController, UITextFieldDelegate, UINavigationCont
         // Handle the text field's user input through delegate callbacks
         minutes.delegate = self
         seconds.delegate = self
-        
-        //minutes.becomeFirstResponder()
 
         // Ensure that the display link is initially not updating //
         self.paused = true;
