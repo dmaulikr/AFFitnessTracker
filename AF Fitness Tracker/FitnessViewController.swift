@@ -96,9 +96,13 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
             let timerMinutes = String(format: "%02d", run.minutes)
             let timerSeconds = String(format: "%02d", run.seconds)
             
+            minutes = run.minutes;
+            seconds = run.seconds;
+            
             //concatenate minuets and seconds as assign it to the UILabel
             runLabel.text = timerMinutes + ":" + timerSeconds
         }
+        checkValidSave();
     }
     
     @IBAction func unwindForSitups(sender: UIStoryboardSegue) {
@@ -106,5 +110,22 @@ class FitnessViewController: UIViewController, UINavigationControllerDelegate {
             // Add a new situps count and display for user.
             situpsLabel.text = situps.description
         }
+        checkValidSave();
+    }
+    
+    @IBAction func unwindForPushups(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? PushupViewController, pushups = sourceViewController.pushups {
+            //Add pushups
+            pushupsLabel.text = String(pushups);
+        }
+        checkValidSave();
+    }
+    
+    @IBAction func unwindForWaist(sender: UIStoryboardSegue) {
+        if let sourceViewController = sender.sourceViewController as? WaistViewController, waist = sourceViewController.waist {
+            //Add waist
+            waistLabel.text = String(waist);
+        }
+        checkValidSave();
     }
 }
