@@ -1,0 +1,22 @@
+[
+    { "run": [
+        { "time": 745, "points": 65 },
+        { "time": 692, "points": 70 }
+        ]
+    },
+    { "situps": [
+        { "count": 34, "points": 28 },
+        { "count": 28, "points" : 15 }
+        ]
+    },
+    { "pushups": [
+        { "count": 45, "points": 26 },
+        { "count": 65, "points": 30 }
+        ]
+    },
+    { "waist": [
+        { "measurement": 34, "points": 10 },
+        { "measurement": 38, "points": 6 }
+        ]
+    }
+]
