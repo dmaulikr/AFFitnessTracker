@@ -10,8 +10,8 @@ import Foundation
 import SwiftyJSON
 
 
-func loadInitialData() -> ScoreMapping {
-    let path = NSBundle.mainBundle().pathForResource("m29", ofType: "json")!
+func loadInitialData(dataFile: String) -> ScoreMapping {
+    let path = NSBundle.mainBundle().pathForResource(dataFile, ofType: "json")!
     let data = NSData(contentsOfFile: path)!
     let json = JSON(data: data)
 

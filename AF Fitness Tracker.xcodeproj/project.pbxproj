@@ -21,6 +21,19 @@
 		F28150741CD03B62006CB19A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F28150731CD03B62006CB19A /* Assets.xcassets */; };
 		F28150821CD03B62006CB19A /* AF_Fitness_TrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F28150811CD03B62006CB19A /* AF_Fitness_TrackerTests.swift */; };
 		F281508D1CD03B62006CB19A /* AF_Fitness_TrackerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F281508C1CD03B62006CB19A /* AF_Fitness_TrackerUITests.swift */; };
+		F28716921CF51B4100D0107B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28716821CF51B0E00D0107B /* SwiftyJSON.framework */; };
+		F28716931CF51B4100D0107B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F28716861CF51B0E00D0107B /* SwiftyJSON.framework */; };
+		F28716941CF51B4100D0107B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F287168A1CF51B0E00D0107B /* SwiftyJSON.framework */; };
+		F28716951CF51B4100D0107B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F287168C1CF51B0E00D0107B /* SwiftyJSON.framework */; };
+		F287169B1CF51C6300D0107B /* f29.json in Resources */ = {isa = PBXBuildFile; fileRef = F28716961CF51C6300D0107B /* f29.json */; };
+		F287169C1CF51C6300D0107B /* f30.json in Resources */ = {isa = PBXBuildFile; fileRef = F28716971CF51C6300D0107B /* f30.json */; };
+		F287169D1CF51C6300D0107B /* f39.json in Resources */ = {isa = PBXBuildFile; fileRef = F28716981CF51C6300D0107B /* f39.json */; };
+		F287169E1CF51C6300D0107B /* f49.json in Resources */ = {isa = PBXBuildFile; fileRef = F28716991CF51C6300D0107B /* f49.json */; };
+		F287169F1CF51C6300D0107B /* f59.json in Resources */ = {isa = PBXBuildFile; fileRef = F287169A1CF51C6300D0107B /* f59.json */; };
+		F28716A41CF51C7200D0107B /* m30.json in Resources */ = {isa = PBXBuildFile; fileRef = F28716A01CF51C7200D0107B /* m30.json */; };
+		F28716A51CF51C7200D0107B /* m40.json in Resources */ = {isa = PBXBuildFile; fileRef = F28716A11CF51C7200D0107B /* m40.json */; };
+		F28716A61CF51C7200D0107B /* m50.json in Resources */ = {isa = PBXBuildFile; fileRef = F28716A21CF51C7200D0107B /* m50.json */; };
+		F28716A71CF51C7200D0107B /* m60.json in Resources */ = {isa = PBXBuildFile; fileRef = F28716A31CF51C7200D0107B /* m60.json */; };
 		F2AFCBE01CD996FA000E404B /* SitupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2AFCBDF1CD996FA000E404B /* SitupViewController.swift */; };
 		F2F8769A1CD03DA6004A72F3 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F876991CD03DA6004A72F3 /* Score.swift */; };
 		F2F8769C1CD0422C004A72F3 /* FitnessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2F8769B1CD0422C004A72F3 /* FitnessTableViewCell.swift */; };
@@ -44,6 +57,55 @@
 			remoteGlobalIDString = F28150681CD03B62006CB19A;
 			remoteInfo = "AF Fitness Tracker";
 		};
+		F28716811CF51B0E00D0107B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFDB19575BE100351305;
+			remoteInfo = "SwiftyJSON iOS";
+		};
+		F28716831CF51B0E00D0107B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 2E4FEFE619575BE100351305;
+			remoteInfo = "SwiftyJSON iOS Tests";
+		};
+		F28716851CF51B0E00D0107B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC5B1A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX";
+		};
+		F28716871CF51B0E00D0107B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 9C7DFC651A9102BD005AA3F7;
+			remoteInfo = "SwiftyJSON OSX Tests";
+		};
+		F28716891CF51B0E00D0107B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4D7CCE81B9465A700EE7221;
+			remoteInfo = "SwiftyJSON watchOS";
+		};
+		F287168B1CF51B0E00D0107B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 7236B4F61BAC14150020529B;
+			remoteInfo = "SwiftyJSON tvOS";
+		};
+		F287168D1CF51B0E00D0107B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = A8580F741BCF5C5B00DA927B;
+			remoteInfo = "SwiftyJSON tvOS Tests";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +128,16 @@
 		F28150881CD03B62006CB19A /* AF Fitness TrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "AF Fitness TrackerUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F281508C1CD03B62006CB19A /* AF_Fitness_TrackerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AF_Fitness_TrackerUITests.swift; sourceTree = "<group>"; };
 		F281508E1CD03B62006CB19A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SwiftyJSON.xcodeproj; path = ../SwiftyJSON/SwiftyJSON.xcodeproj; sourceTree = "<group>"; };
+		F28716961CF51C6300D0107B /* f29.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = f29.json; sourceTree = "<group>"; };
+		F28716971CF51C6300D0107B /* f30.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = f30.json; sourceTree = "<group>"; };
+		F28716981CF51C6300D0107B /* f39.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = f39.json; sourceTree = "<group>"; };
+		F28716991CF51C6300D0107B /* f49.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = f49.json; sourceTree = "<group>"; };
+		F287169A1CF51C6300D0107B /* f59.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = f59.json; sourceTree = "<group>"; };
+		F28716A01CF51C7200D0107B /* m30.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = m30.json; sourceTree = "<group>"; };
+		F28716A11CF51C7200D0107B /* m40.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = m40.json; sourceTree = "<group>"; };
+		F28716A21CF51C7200D0107B /* m50.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = m50.json; sourceTree = "<group>"; };
+		F28716A31CF51C7200D0107B /* m60.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = m60.json; sourceTree = "<group>"; };
 		F2AFCBDF1CD996FA000E404B /* SitupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SitupViewController.swift; sourceTree = "<group>"; };
 		F2F876991CD03DA6004A72F3 /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
 		F2F8769B1CD0422C004A72F3 /* FitnessTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessTableViewCell.swift; sourceTree = "<group>"; };
@@ -79,6 +151,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F28716921CF51B4100D0107B /* SwiftyJSON.framework in Frameworks */,
+				F28716931CF51B4100D0107B /* SwiftyJSON.framework in Frameworks */,
+				F28716941CF51B4100D0107B /* SwiftyJSON.framework in Frameworks */,
+				F28716951CF51B4100D0107B /* SwiftyJSON.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +179,15 @@
 			isa = PBXGroup;
 			children = (
 				817BEF911CF48DAE00E791DF /* m29.json */,
+				F28716A01CF51C7200D0107B /* m30.json */,
+				F28716A11CF51C7200D0107B /* m40.json */,
+				F28716A21CF51C7200D0107B /* m50.json */,
+				F28716A31CF51C7200D0107B /* m60.json */,
+				F28716961CF51C6300D0107B /* f29.json */,
+				F28716971CF51C6300D0107B /* f30.json */,
+				F28716981CF51C6300D0107B /* f39.json */,
+				F28716991CF51C6300D0107B /* f49.json */,
+				F287169A1CF51C6300D0107B /* f59.json */,
 			);
 			name = json_import;
 			sourceTree = "<group>";
@@ -110,6 +195,7 @@
 		F28150601CD03B62006CB19A = {
 			isa = PBXGroup;
 			children = (
+				F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */,
 				F281506B1CD03B62006CB19A /* AF Fitness Tracker */,
 				F28150801CD03B62006CB19A /* AF Fitness TrackerTests */,
 				F281508B1CD03B62006CB19A /* AF Fitness TrackerUITests */,
@@ -168,6 +254,20 @@
 				F281508E1CD03B62006CB19A /* Info.plist */,
 			);
 			path = "AF Fitness TrackerUITests";
+			sourceTree = "<group>";
+		};
+		F28716781CF51B0E00D0107B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F28716821CF51B0E00D0107B /* SwiftyJSON.framework */,
+				F28716841CF51B0E00D0107B /* SwiftyJSON iOS Tests.xctest */,
+				F28716861CF51B0E00D0107B /* SwiftyJSON.framework */,
+				F28716881CF51B0E00D0107B /* SwiftyJSON OSX Tests.xctest */,
+				F287168A1CF51B0E00D0107B /* SwiftyJSON.framework */,
+				F287168C1CF51B0E00D0107B /* SwiftyJSON.framework */,
+				F287168E1CF51B0E00D0107B /* SwiftyJSON tvOS Tests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +363,12 @@
 			mainGroup = F28150601CD03B62006CB19A;
 			productRefGroup = F281506A1CD03B62006CB19A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F28716781CF51B0E00D0107B /* Products */;
+					ProjectRef = F28716771CF51B0E00D0107B /* SwiftyJSON.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				F28150681CD03B62006CB19A /* AF Fitness Tracker */,
@@ -272,6 +378,58 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXReferenceProxy section */
+		F28716821CF51B0E00D0107B /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = F28716811CF51B0E00D0107B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F28716841CF51B0E00D0107B /* SwiftyJSON iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON iOS Tests.xctest";
+			remoteRef = F28716831CF51B0E00D0107B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F28716861CF51B0E00D0107B /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = F28716851CF51B0E00D0107B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F28716881CF51B0E00D0107B /* SwiftyJSON OSX Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON OSX Tests.xctest";
+			remoteRef = F28716871CF51B0E00D0107B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F287168A1CF51B0E00D0107B /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = F28716891CF51B0E00D0107B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F287168C1CF51B0E00D0107B /* SwiftyJSON.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SwiftyJSON.framework;
+			remoteRef = F287168B1CF51B0E00D0107B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F287168E1CF51B0E00D0107B /* SwiftyJSON tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SwiftyJSON tvOS Tests.xctest";
+			remoteRef = F287168D1CF51B0E00D0107B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
 /* Begin PBXResourcesBuildPhase section */
 		F28150671CD03B62006CB19A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
@@ -279,8 +437,17 @@
 			files = (
 				817BEFB41CF4B9F000E791DF /* m29.json in Resources */,
 				F28150741CD03B62006CB19A /* Assets.xcassets in Resources */,
+				F28716A61CF51C7200D0107B /* m50.json in Resources */,
+				F287169F1CF51C6300D0107B /* f59.json in Resources */,
 				F2F876A41CD0551E004A72F3 /* FitnessTableViewController.xib in Resources */,
+				F28716A51CF51C7200D0107B /* m40.json in Resources */,
+				F287169E1CF51C6300D0107B /* f49.json in Resources */,
+				F287169B1CF51C6300D0107B /* f29.json in Resources */,
+				F28716A71CF51C7200D0107B /* m60.json in Resources */,
+				F287169D1CF51C6300D0107B /* f39.json in Resources */,
 				F28150721CD03B62006CB19A /* Main.storyboard in Resources */,
+				F28716A41CF51C7200D0107B /* m30.json in Resources */,
+				F287169C1CF51C6300D0107B /* f30.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

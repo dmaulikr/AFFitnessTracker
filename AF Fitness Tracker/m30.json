@@ -1,0 +1,77 @@
+ [
+  { "run": [
+            { "time": 552, "points": 60 },
+            { "time": 553, "points": 59.3 },
+            { "time": 575, "points": 58.6 },
+            { "time": 586, "points": 57.9 },
+            { "time": 599, "points": 57.3 },
+            
+            { "time": 553, "points": 56.6 },
+            { "time": 553, "points": 55.7 },
+            { "time": 553, "points": 54.8 },
+            { "time": 553, "points": 53.7 },
+            { "time": 553, "points": 52.4 },
+            { "time": 553, "points": 50.9 },
+            { "time": 553, "points": 49.2 },
+            { "time": 553, "points": 47.2 },
+            { "time": 553, "points": 44.9 },
+            { "time": 553, "points": 42.3 },
+            { "time": 553, "points": 39.3 }
+            ]
+  },
+  { "situps": [
+               { "count": 54, "points": 10 },
+               { "count": 51, "points" : 9.5 },
+               { "count": 50, "points" : 9.4 },
+               { "count": 49, "points" : 9.2 },
+               { "count": 48, "points" : 9.0 },
+               { "count": 47, "points" : 8.8 },
+               { "count": 46, "points" : 8.7 },
+               { "count": 45, "points" : 8.5 },
+               { "count": 44, "points" : 8.3 },
+               { "count": 43, "points" : 8.0 },
+               { "count": 42, "points" : 7.5 },
+               { "count": 41, "points" : 7.0 },
+               { "count": 40, "points" : 6.5 },
+               { "count": 39, "points" : 6.0 }
+               ]
+  },
+  { "pushups": [
+                { "count": 57, "points": 10 },
+                { "count": 52, "points": 9.5 },
+                { "count": 51, "points" : 9.4 },
+                { "count": 50, "points" : 9.3 },
+                { "count": 49, "points" : 9.2 },
+                { "count": 48, "points" : 9.2 },
+                { "count": 47, "points" : 9.1 },
+                { "count": 46, "points" : 9.0 },
+                { "count": 45, "points" : 8.9 },
+                { "count": 44, "points" : 8.8 },
+                { "count": 43, "points" : 8.7 },
+                { "count": 42, "points" : 8.6 },
+                { "count": 41, "points" : 8.5 },
+                { "count": 40, "points" : 8.3 },
+                { "count": 39, "points" : 8.0 },
+                { "count": 38, "points" : 7.8 },
+                { "count": 37, "points" : 7.7 },
+                { "count": 36, "points" : 7.5 }
+                ]
+  },
+  { "waist": [
+              { "measurement": 32, "points": 20 },
+              { "measurement": 33, "points": 20 },
+              { "measurement": 33.5, "points": 20 },
+              { "measurement": 34, "points": 20 },
+              { "measurement": 34.5, "points": 20 },
+              { "measurement": 35, "points": 20 },
+              { "measurement": 35.5, "points": 17.6 },
+              { "measurement": 36, "points": 17.0 },
+              { "measurement": 36.5, "points": 16.4 },
+              { "measurement": 37, "points": 15.8 },
+              { "measurement": 37.5, "points": 15.1 },
+              { "measurement": 38, "points": 14.4 },
+              { "measurement": 38.5, "points": 13.5 },
+              { "measurement": 39, "points": 12.6 }
+              ]
+  }
+  ]
